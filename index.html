@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love, Jolie ♡</title>
+
+    <!-- Elegant fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #5a3c48;
+            background: #fffafb;
+            overflow-x: hidden;
+        }
+
+        /* =========================================
+           BACKGROUND
+        ========================================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -10;
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffafb 0%,
+                    #fff3f7 45%,
+                    #fffafd 100%
+                );
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.45;
+        }
+
+        .orb.one {
+            width: 500px;
+            height: 500px;
+            background: #ffd0df;
+            top: -200px;
+            left: -150px;
+        }
+
+        .orb.two {
+            width: 450px;
+            height: 450px;
+            background: #f8c5d6;
+            right: -180px;
+            top: 25%;
+        }
+
+        .orb.three {
+            width: 500px;
+            height: 500px;
+            background: #ffe1ea;
+            bottom: -250px;
+            left: 25%;
+        }
+
+        /* =========================================
+           FLOWERS
+        ========================================= */
+
+        .flower {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.55;
+            font-size: 25px;
+        }
+
+        .flower.one {
+            top: 12%;
+            left: 5%;
+            transform: rotate(-20deg);
+        }
+
+        .flower.two {
+            top: 25%;
+            right: 6%;
+            transform: rotate(20deg);
+        }
+
+        .flower.three {
+            top: 55%;
+            left: 3%;
+            transform: rotate(15deg);
+        }
+
+        .flower.four {
+            top: 72%;
+            right: 4%;
+            transform: rotate(-15deg);
+        }
+
+        .flower.five {
+            top: 90%;
+            left: 8%;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 25px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 12px;
+            color: #bb7b91;
+            margin-bottom: 35px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(80px, 15vw, 190px);
+            line-height: 0.85;
+            color: #c85f82;
+            letter-spacing: -6px;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            color: #e28ba5;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 45px auto 0;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #795765;
+            font-weight: 300;
+        }
+
+        .hero-heart {
+            width: 75px;
+            height: 75px;
+            margin: 45px auto 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(218, 123, 151, 0.25);
+
+            box-shadow:
+                0 15px 50px rgba(197, 95, 130, 0.18);
+
+            font-size: 30px;
+            color: #d56f91;
+
+            animation: pulse 2.2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #b78596;
+
+            text-transform: uppercase;
+        }
+
+        .scroll::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 45px;
+            background: #d99aae;
+            margin: 12px auto 0;
+        }
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 150px 30px;
+        }
+
+        .section-label {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 11px;
+            color: #c27d92;
+            margin-bottom: 18px;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 7vw, 75px);
+            font-weight: 400;
+            color: #754958;
+            margin-bottom: 70px;
+        }
+
+        .section-heading em {
+            color: #d87896;
+        }
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .intro {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .intro-number {
+            font-family: "Playfair Display", serif;
+            font-size: 190px;
+            line-height: 1;
+            color: rgba(218, 115, 146, 0.12);
+            text-align: center;
+        }
+
+        .intro-text {
+            padding: 45px;
+
+            background: rgba(255, 255, 255, 0.48);
+
+            border: 1px solid rgba(220, 145, 165, 0.18);
+
+            border-radius: 35px;
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 30px 80px rgba(160, 80, 105, 0.08);
+        }
+
+        .intro-text h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+            font-weight: 400;
+            color: #c96384;
+            margin-bottom: 25px;
+        }
+
+        .intro-text p {
+            font-size: 17px;
+            line-height: 2;
+            color: #735460;
+            margin-bottom: 22px;
+        }
+
+        /* =========================================
+           MAIN LOVE MESSAGE
+        ========================================= */
+
+        .love-message {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .love-message .opening {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            font-style: italic;
+            color: #d06c8c;
+            margin-bottom: 45px;
+        }
+
+        .love-message p {
+            font-size: 18px;
+            line-height: 2.1;
+            color: #70505c;
+            margin-bottom: 30px;
+        }
+
+        .love-message .emphasis {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            color: #ca6485;
+            margin: 55px 0;
+            line-height: 1.5;
+        }
+
+        /* =========================================
+           BEAUTY SECTION
+        ========================================= */
+
+        .beauty {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .beauty-item {
+            min-height: 270px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 35px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.75),
+                    rgba(255,235,242,0.65)
+                );
+
+            border: 1px solid rgba(216, 132, 156, 0.18);
+
+            backdrop-filter: blur(15px);
+
+            transition: transform 0.5s ease,
+                        box-shadow 0.5s ease;
+        }
+
+        .beauty-item:hover {
+            transform: translateY(-10px);
+            box-shadow:
+                0 25px 60px rgba(191, 91, 125, 0.14);
+        }
+
+        .beauty-icon {
+            font-size: 35px;
+            margin-bottom: auto;
+        }
+
+        .beauty-item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            font-weight: 400;
+            color: #c96383;
+            margin-bottom: 12px;
+        }
+
+        .beauty-item p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #765662;
+        }
+
+        /* =========================================
+           QUOTE
+        ========================================= */
+
+        .quote {
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .quote-line {
+            width: 60px;
+            height: 1px;
+            background: #d98da4;
+            margin: 0 auto 35px;
+        }
+
+        .quote p {
+            max-width: 900px;
+            margin: auto;
+
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1.35;
+
+            color: #754958;
+        }
+
+        .quote p span {
+            color: #d87394;
+            font-style: italic;
+        }
+
+        /* =========================================
+           FOREVER SECTION
+        ========================================= */
+
+        .forever {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 100px 25px;
+
+            position: relative;
+        }
+
+        .forever-content {
+            max-width: 900px;
+        }
+
+        .forever-small {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #b97b90;
+            margin-bottom: 30px;
+        }
+
+        .forever h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(75px, 13vw, 160px);
+            line-height: 0.85;
+            font-weight: 400;
+            color: #c96183;
+            letter-spacing: -5px;
+        }
+
+        .forever h2 em {
+            color: #e08aa5;
+        }
+
+        .forever-text {
+            max-width: 700px;
+            margin: 55px auto 0;
+
+            font-size: 18px;
+            line-height: 2;
+            color: #765560;
+        }
+
+        .forever-symbol {
+            margin: 50px auto 0;
+
+            width: 90px;
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(213,120,147,0.2);
+
+            color: #d67694;
+            font-size: 32px;
+
+            box-shadow:
+                0 20px 60px rgba(180, 80, 110, 0.12);
+        }
+
+        /* =========================================
+           FINAL MESSAGE
+        ========================================= */
+
+        .final {
+            max-width: 900px;
+            margin: auto;
+            padding: 80px 60px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,235,242,0.75),
+                    rgba(255,250,252,0.8)
+                );
+
+            border-radius: 45px;
+
+            border: 1px solid rgba(220, 137, 161, 0.2);
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 90px rgba(175, 86, 112, 0.1);
+        }
+
+        .final h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 55px;
+            font-weight: 400;
+            color: #c65f80;
+            margin-bottom: 30px;
+        }
+
+        .final p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+
+            font-size: 17px;
+            line-height: 2;
+
+            color: #72525d;
+        }
+
+        .signature {
+            margin-top: 45px;
+
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+
+            font-size: 28px;
+            color: #ca6686;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+
+            color: #b37a8d;
+
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        footer .heart {
+            font-size: 22px;
+            letter-spacing: 0;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .section {
+                padding: 100px 20px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .intro-number {
+                font-size: 120px;
+            }
+
+            .intro-text {
+                padding: 30px;
+            }
+
+            .beauty {
+                grid-template-columns: 1fr;
+            }
+
+            .beauty-item {
+                min-height: 230px;
+            }
+
+            .final {
+                padding: 55px 25px;
+                border-radius: 30px;
+            }
+
+            .final h2 {
+                font-size: 42px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+                font-size: 85px;
+                letter-spacing: -3px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .love-message p {
+                font-size: 16px;
+            }
+
+            .love-message .emphasis {
+                font-size: 28px;
+            }
+
+            .flower {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background">
+
+        <div class="orb one"></div>
+        <div class="orb two"></div>
+        <div class="orb three"></div>
+
+    </div>
+
+
+    <!-- FLOWERS -->
+
+    <div class="flower one">🌸</div>
+    <div class="flower two">✿</div>
+    <div class="flower three">🌷</div>
+    <div class="flower four">🌸</div>
+    <div class="flower five">✿</div>
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Happy Girlfriend's Day
+            </div>
+
+            <h1>
+                For <span>Jolie</span>
+            </h1>
+
+            <p class="hero-description">
+                For the girl who makes my life brighter, my days better,
+                and my heart happier just by being herself.
+            </p>
+
+            <div class="hero-heart">
+                ♡
+            </div>
+
+        </div>
+
+        <div class="scroll">
+            discover
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         INTRO
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+            A little something for you
+        </div>
+
+        <h2 class="section-heading">
+            You are <em>so</em> special to me.
+        </h2>
+
+
+        <div class="intro">
+
+            <div class="intro-number">
+                01
+            </div>
+
+
+            <div class="intro-text">
+
+                <h3>
+                    My beautiful girl,
+                </h3>
+
+                <p>
+                    I don't think I could ever fit everything I feel for you
+                    into one website, one letter, or even a thousand words.
+                    But I wanted to try anyway.
+                </p>
+
+                <p>
+                    You have become such a beautiful part of my life, and
+                    every day I'm reminded of how lucky I am that I get to
+                    know you, love you, and call you mine.
+                </p>
+
+                <p>
+                    There are so many things about you that I adore.
+                    Some are big things, some are incredibly small, and
+                    some are things you probably don't even realize I notice.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         LOVE MESSAGE
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+            What I see when I look at you
+        </div>
+
+        <h2 class="section-heading">
+            More beautiful than <em>words</em> can explain.
+        </h2>
+
+
+        <div class="love-message">
+
+            <div class="opening">
+                "If only you could see yourself through my eyes..."
+            </div>
+
+
+            <p>
+                Jolie, you're genuinely so beautiful to me. And when I say
+                beautiful, I mean so much more than simply being pretty.
+                There's something about you that catches my attention in a way
+                I don't think I could ever properly explain.
+            </p>
+
+            <p>
+                I love your eyes. I love the way they look when you're happy,
+                when you're laughing, when you're excited about something,
+                and even when you're just sitting there being yourself.
+                They're one of those little things about you that I could
+                probably look at forever.
+            </p>
+
+            <p>
+                I love your smile more than you probably realize.
+                Especially the real one. The one that comes out when
+                something genuinely makes you happy. Seeing that smile is
+                honestly one of my favorite things in the world.
+            </p>
+
+            <p>
+                I love your voice too. I love hearing you talk, whether
+                you're telling me something important, talking about your
+                day, making a joke, or just saying something completely
+                random. I could listen to you for hours.
+            </p>
+
+            <p>
+                I love all the little things about your appearance too.
+                The expressions you make, the way you look when you're
+                concentrating, the way you look when you're excited,
+                and all those tiny details that make you unmistakably you.
+            </p>
+
+
+            <div class="emphasis">
+                But your beauty isn't the thing I love most about you.
+                <br>
+                It's the person behind it.
+            </div>
+
+
+            <p>
+                You're kind. You're caring. You're loving. You're
+                genuinely thoughtful, and you have such a beautiful heart.
+                The way you care about the people you love is something
+                I admire so much.
+            </p>
+
+            <p>
+                I love your personality. I love how you can make me laugh.
+                I love how comfortable I feel around you. I love the way
+                we can talk about absolutely nothing and somehow still
+                have the best time.
+            </p>
+
+            <p>
+                I love your little habits. The random things you say.
+                The way you react when something surprises you.
+                The way you laugh at things.
+                The little moments where you're just being yourself.
+            </p>
+
+            <p>
+                Those are the moments that make me fall for you even more.
+                Because they aren't things you're doing to impress anyone.
+                They're just you.
+            </p>
+
+            <p>
+                And that's exactly who I want.
+            </p>
+
+            <div class="emphasis">
+                I don't want a different version of you.
+                <br>
+                I want <em>you.</em>
+            </div>
+
+            <p>
+                I hope you know that you never need to change yourself to
+                be beautiful for me. You already are. Your imperfections,
+                your little quirks, your personality, your smile, your
+                laugh, your heart — all of it is part of the girl I love.
+            </p>
+
+            <p>
+                Sometimes I wish you could see yourself the way I see you.
+                You'd see someone incredibly beautiful, incredibly special,
+                and completely worth loving.
+            </p>
+
+            <p>
+                You'd see the girl whose messages can make my entire day
+                better. The girl whose laugh can make me smile without
+                even realizing it. The girl I think about when I'm doing
+                absolutely nothing.
+            </p>
+
+            <p>
+                You'd see the girl I want beside me when things are good,
+                when things are difficult, and through every ordinary
+                day in between.
+            </p>
+
+            <div class="emphasis">
+                You are beautiful.
+                <br>
+                You are loved.
+                <br>
+                You are my favorite person.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BEAUTY / PERSONALITY
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+            Just a few reasons
+        </div>
+
+        <h2 class="section-heading">
+            Things I <em>adore</em> about you.
+        </h2>
+
+
+        <div class="beauty">
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Your smile
+                </h3>
+
+                <p>
+                    Your smile has this way of making everything feel a
+                    little better. I could never get tired of seeing it.
+                </p>
+
+            </div>
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Your eyes
+                </h3>
+
+                <p>
+                    They're one of the first things I notice and one of the
+                    things I could probably stare at forever.
+                </p>
+
+            </div>
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Your beauty
+                </h3>
+
+                <p>
+                    You're beautiful in ways that go far beyond appearance.
+                    Everything about you comes together so perfectly.
+                </p>
+
+            </div>
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    🎀
+                </div>
+
+                <h3>
+                    Your personality
+                </h3>
+
+                <p>
+                    You're funny, sweet, caring and completely yourself.
+                    That's one of the things that makes you so special.
+                </p>
+
+            </div>
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    🌷
+                </div>
+
+                <h3>
+                    Your heart
+                </h3>
+
+                <p>
+                    The way you care about people and the kindness you show
+                    says so much about the beautiful person you are.
+                </p>
+
+            </div>
+
+
+            <div class="beauty-item">
+
+                <div class="beauty-icon">
+                    ∞
+                </div>
+
+                <h3>
+                    Just you
+                </h3>
+
+                <p>
+                    There isn't one single reason I love you.
+                    It's everything. It's simply you being you.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUOTE
+    ========================================= -->
+
+    <section class="quote">
+
+        <div class="quote-line"></div>
+
+        <p>
+            "Out of everyone in the world,
+            <span>I'd still choose you.</span>"
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         FOREVER
+    ========================================= -->
+
+    <section class="forever">
+
+        <div class="forever-content">
+
+            <div class="forever-small">
+                And if you ever ask me what I want...
+            </div>
+
+            <h2>
+                You.<br>
+                <em>Forever.</em>
+            </h2>
+
+            <p class="forever-text">
+                I don't just want you for a moment.
+                I don't just want you for today.
+                I want to keep making memories with you.
+                I want to see where life takes us.
+                I want to laugh with you, grow with you,
+                support you, and be there for you through everything.
+            </p>
+
+            <p class="forever-text">
+                I want the random conversations.
+                The stupid jokes.
+                The late nights.
+                The adventures.
+                The quiet days.
+                The difficult days.
+                The amazing days.
+                All of it.
+            </p>
+
+            <p class="forever-text">
+                I want to look back someday and realize
+                that we really did get our forever.
+            </p>
+
+            <div class="forever-symbol">
+                ∞
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FINAL MESSAGE
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="final">
+
+            <div class="section-label">
+                One last thing
+            </div>
+
+            <h2>
+                Happy Girlfriend's Day,
+                my love.
+            </h2>
+
+            <p>
+                Jolie, thank you for being you.
+                Thank you for every laugh, every conversation,
+                every little moment, and every memory we've made.
+            </p>
+
+            <p>
+                Thank you for letting me love you and for giving me
+                someone so incredible to love.
+            </p>
+
+            <p>
+                I hope you always know how beautiful you are,
+                how special you are, and how much you mean to me.
+            </p>
+
+            <p>
+                I don't know exactly what the future holds,
+                but I know who I want beside me while I find out.
+            </p>
+
+            <p>
+                <strong>
+                    You.
+                </strong>
+            </p>
+
+            <p>
+                Today, tomorrow, and every day after that.
+            </p>
+
+            <div class="signature">
+                Forever yours, ♡<br>
+                Snorri
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="heart">
+            ♡
+        </div>
+
+        MADE WITH LOVE FOR JOLIE
+
+        <br><br>
+
+        04 · 09 · 2026
+
+    </footer>
+
+
+    <!-- =========================================
+         SMALL ANIMATION
+    ========================================= -->
+
+    <script>
+
+        const flowers = ["🌸", "✿", "♡", "🌷"];
+
+        function createFlower() {
+
+            const flower = document.createElement("div");
+
+            flower.innerText =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.position = "fixed";
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.top = "-30px";
+            flower.style.fontSize =
+                (12 + Math.random() * 14) + "px";
+
+            flower.style.opacity =
+                0.15 + Math.random() * 0.35;
+
+            flower.style.pointerEvents = "none";
+            flower.style.zIndex = "1";
+
+            document.body.appendChild(flower);
+
+            const duration =
+                8000 + Math.random() * 7000;
+
+            flower.animate(
+                [
+                    {
+                        transform: "translateY(0) rotate(0deg)"
+                    },
+                    {
+                        transform:
+                            "translateY(110vh) rotate(360deg)"
+                    }
+                ],
+                {
+                    duration: duration,
+                    easing: "linear"
+                }
+            );
+
+            setTimeout(() => {
+                flower.remove();
+            }, duration);
+        }
+
+        setInterval(createFlower, 1300);
+
+    </script>
+
+</body>
+</html>
+
